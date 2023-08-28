@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link rel="stylesheet" href="./tip.css" />
+  <title>Tip Calculator</title>
+</head>
+
+<body>
+  <main class="wrap">
+    <form id="container">
+      <section class="other">
+        <h1 style="text-align: center;" id="top">Matrix Tip Calculator</h1>
+        <br>
+        <section id="billInfo">
+          <label for="amount">Bill Amount: </label>
+          <br />
+          <button class="logo">&#8358;</button>
+          <input class="input" style="width: 80%;" name="display" id="amount" placeholder="Enter Amount" /> <br />
+          <br />
+          <label for="yes">
+            <p>Are your guests willing to contribute to the tip?</p>
+          </label>
+          <input name="willingGuest" id="yes" value="1" type="radio" /> Yes
+          <input name="willingGuest" id="no" value="0" type="radio" /> No
+          <br /> <br>
+          <label for="guests">Split amongst:</label>
+          <br />
+          <button class="logo">&#128372;</button><input type="range" id="guests" min="0" style="width: 80%;" max="20"
+            value="0" step="1" oninput="this.nextElementSibling.value = this.value"><output>0</output>
+          <br />
+        </section>
+        
+        <br />
+        <hr>
+        <label for="quality"> Service Quality: </label>
+        <select id="quality">
+          <option disabled value="0" selected>Choose</option>
+          <option value="0.2">20% - Generous at Heart</option>
+          <option value="0.15">15% - Exceptional Service Delivery</option>
+          <option value="0.1">10% - Good Service Delivery</option>
+          <option value="0.05">5% - Service Delivery was just there</option>
+        </select>
+        <br />
+        <br />
+      </section>
+      <section class="buttons">
+        <div class="section1">
+          <input type="button" value="7" onclick="display.value += '7'">
+          <input type="button" value="8" onclick="display.value += '8'">
+          <input type="button" value="9" onclick="display.value += '9'">
+        </div>
+        <div class="section2">
+          <input type="button" value="4" onclick="display.value += '4'">
+          <input type="button" value="5" onclick="display.value += '5'">
+          <input type="button" value="6" onclick="display.value += '6'">
+        </div>
+        <div class="section3">
+          <input type="button" value="1" onclick="display.value += '1'">
+          <input type="button" value="2" onclick="display.value += '2'">
+          <input type="button" value="3" onclick="display.value += '3'">
+        </div>
+        <div class="section4">
+          <input type="button" value="DEL" onclick="display.value = display.value.toString().slice(0, -1)">
+          <input type="button" value="0" onclick="display.value += '0'">
+          <input type="button" value="." onclick="display.value">
+        </div>
+        <!-- <br /> -->
+        <div class="btn">
+          <button type="button" id="calc" onclick="calculate()">Calculate</button>
+          <button type="button" id="reset">Reset</button>
+        </div>
+      </section>
+      <!-- <br> -->
+      <div style="text-align: center;" id="result">
+      </div>
+      <small id="power" style="text-align: center; font-size: xx-small;">V 1.00 powered by Team Matrix</small>
+    </form>
+  </main>
+  <script src="./tip.js"></script>
+</body>
+
+</html>
