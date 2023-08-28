@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+   
+}
+hr{
+    width: 100%;
+    border: 0.2px solid rgba(128, 128, 128, 0.356);
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #30E8BF;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f8f6f4, #30E8BF);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #89b4a4, #30E8BF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+#container {
+    width: 80%;
+    height: 75%;
+    border-radius: 20px;
+    background: #34e89e;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0f3443, #34e89e);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #527243d7, #34e89e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding: 1rem;
+    box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.404);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column ;
+    position: relative;
+}
+
+header h1{
+    font-size: xx-large;
+  }
+
+section #amount, #guests {
+    height: 2rem;
+    border: 1px solid gray;
+    width: 95%, auto;
+    border-radius: 5px;
+    /* background-color: aliceblue; */
+    color: #0f3443;
+    width: 100% auto;
+    border-radius: 5px;
+    height: 2rem;
+    background-color: rgba(238, 238, 238, 0.411);
+    box-shadow: 2px 3px 3px rgba(53, 53, 53, 0.411);
+    border: none;
+}
+.logo {
+    width: 5%;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    font-size: x-large;
+    cursor: pointer;
+    
+}
+
+#billInfo {
+    background-color: rgba(20, 20, 20, 0.466);
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 2px 3px 3px rgba(24, 24, 24, 0.767);
+}
+
+select {
+    width: 100%;
+    border-radius: 5px;
+    height: 2rem;
+    background-color: rgba(70, 163, 109, 0.411);
+    box-shadow: 2px 3px 3px rgba(53, 53, 53, 0.411);
+    border: none;
+   
+}
+#power{
+    position: absolute;
+    bottom: 5px;
+}
+.btn {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+#reset, #calc{
+    color: #a8c5d1;
+    background-color: rgba(48, 75, 46, 0.795);
+}
+
+.buttons .btn button {
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    color: #0f3443;
+    width: 6rem;
+    height: 2rem;
+    cursor: pointer;
+}
+.btn button:hover {
+    border: 1px solid grey;
+    cursor: pointer;
+    background-color: rgba(16, 56, 47, 0.308);
+    color: aliceblue;
+}
+
+.section1,.section2,.section3,.section4{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-radius: 2px;
+    gap: 0.2rem;
+  }
+
+#result {
+    height: 2rem;
+    text-align: center;
+    width: 80% ;
+    background-color: rgba(238, 238, 238, 0.411);
+    box-shadow: 2px 3px 3px rgba(53, 53, 53, 0.411);
+    border: none;
+    border-radius: 5px;
+    font-weight: 800;
+    margin-top: 5px;
+}
+
+.buttons{
+    color: darkslategrey;
+    border-radius: 5px;
+    padding: 5px;
+    box-shadow: 2px 3px 3px rgba(37, 37, 37, 0.356);
+    background-color: rgba(124, 143, 93, 0.466);
+    width: 85% auto;
+    height: 35%;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 0.2rem;
+    
+}
+
+input{
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    background-color: rgba(19, 37, 27, 0.411);
+  }
+
+
+@media only screen and (max-width: 414px) {
+    #container{
+        height: 90%;
+    }
+}
+@media only screen and (max-width: 390px) {
+    section .logo {
+    
+      width: 8%;
+    }
+
+    section #amount, #guests{
+        width: 92%;
+
+    }
+    #container{
+        height: 95%;
+      }
+    header{
+        flex-wrap: wrap
+    }
+    header h1{
+        font-size: medium;
+        font-display: block;
+    }
+    .btn {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+};
+
+
+@media screen and (max-width: 375px) {
+    .other{
+        height: 55%;  
+    }
+    #container{
+        height: 100%;
+    }
+    .buttons{
+        height: 30%;
+    }
+    #top{
+        position: absolute;
+        top: 5px;
+    }
+}
